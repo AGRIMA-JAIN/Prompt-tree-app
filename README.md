@@ -72,7 +72,7 @@ A backend-driven application for managing and annotating a hierarchical prompt t
 
 **Backend/.env**
     DB_PATH=specify your db path
-    
+
 **This ensures:**
 - A single, consistent SQLite database is used
 - No accidental creation of multiple data.sqlite files
@@ -110,17 +110,24 @@ Server runs at:
     │   │   ├── server.js
     │   │   └── validation.js
     │   ├── data.sqlite
-    │   └── prompt_list.json
+    │   ├── data.sqlite-wal
+    │   ├── data.sqlite-shm
+    │   ├── prompt_list.json
+    │   ├── .env
+    │   └── package.json
     │
-    ├── frontend/
+    ├── Frontend/
     │   ├── src/
     │   │   ├── api/
     │   │   ├── components/
     │   │   ├── App.jsx
     │   │   └── main.jsx
-    │   └── styles.css
+    │   ├── index.html
+    │   ├── vite.config.js
+    │   └── package.json
     │
     └── README.md
+
 
 # Key Design Decisions
 - Backend is the single source of truth
